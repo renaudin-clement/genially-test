@@ -12,3 +12,87 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
+
+.partie1{
+background-color: aquamarine;
+}
+
+.partie2{
+background-color: rgb(127, 255, 133);
+}
+
+.partie3{
+background-color: rgb(197, 127, 255);
+}
+
+.partie4{
+background-color: rgb(255, 214, 127);
+}
+
+
+.partie5{
+background-color: aquamarine;
+}
+
+.partie6{
+background-color: rgb(127, 255, 133);
+}
+
+.partie7{
+background-color: rgb(197, 127, 255);
+}
+
+.partie8{
+background-color: rgb(255, 214, 127);
+}
+
+.partie9{
+background-color: aquamarine;
+}
+
+.partie10{
+background-color: rgb(127, 255, 133);
+}
+
+.partie11{
+background-color: rgb(197, 127, 255);
+}
+
+.partie12{
+background-color: rgb(255, 214, 127);
+}
+
+.partie13{
+background-color: rgb(236, 255, 127);
+}
+
+
+
+
+
+
+
+
+
+
+
+li{
+    list-style: none;
+}
+
+
+  ul{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+
+  header{
+    background-color: chocolate;
+  }
+
+  footer{
+    background-color: yellowgreen;
+  }
