@@ -1,6 +1,10 @@
-export default class Idenrifiant {
-    static async render() {
-        return `
+
+import Page_comp from "../componants/Page_comp.js";
+
+export default class Identifier extends Page_comp {
+    async render() {
+        
+        return Page_comp.renderPage(() => `
         <input type="button" value="getidentifiant" />
 
         <label for="emailAddress">Adresse mail</label><br />
@@ -12,6 +16,8 @@ export default class Idenrifiant {
         size="64"
         maxlength="256"
         />
-        `;
+        
+    `);
     }
+    
 }

@@ -1,6 +1,10 @@
-export default class Resultat {
-    static async render() {
-        return `
+
+import Page_comp from "../componants/Page_comp.js";
+
+export default class Resultat extends Page_comp {
+    async render() {
+        
+        return Page_comp.renderPage(() => `
 
 <section>
 
@@ -109,6 +113,7 @@ export default class Resultat {
         </ul>
     </section>
 
-    `;
+    `);
     }
+    
 }
