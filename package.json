@@ -19,6 +19,7 @@
   "homepage": "https://github.com/renaudin-clement/genially-test#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
+    "openpgp": "^6.1.0",
     "postgres": "^3.4.5"
   }
 }

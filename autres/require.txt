@@ -1,6 +1,9 @@
 npm init -y
 npm install @supabase/supabase-js
 npm install postgres
+npm install openpgp
+sudo apt install gnupg
 
 node index.js
 
+gpg --full-generate-key
