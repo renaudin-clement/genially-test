@@ -7,8 +7,6 @@ const routes = {
     ""             : Home_page,
     "/"            : Home_page,
     "/home"        : Home_page,
-    "/user"        : User_page,
-    "/preset"      : Preset_page,
     "/comparaison" : Comparaison_page,
 }
 
