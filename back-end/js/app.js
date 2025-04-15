@@ -1,54 +1,7 @@
-/*
-const { createHash } = require('crypto');
+import { initOpenPGP, loadPrivateKey, crypted, decrypted } from './pgpUtils.js';
 
-function hash(string) {
-  return createHash('sha256').update(string).digest('hex');
-}
-
-// Fonction pour générer un SHA-256 hash en JavaScript
-async function generateSHA256Hash(input) {
-    const encoder = new TextEncoder();  // Encode l'entrée en bytes
-    const data = encoder.encode(input);  // Convertit l'entrée en un tableau de bytes
-    
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);  // Effectue le hachage SHA-256
-    const hashArray = Array.from(new Uint8Array(hashBuffer));  // Convertit le buffer en tableau de bytes
-    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');  // Convertit les bytes en chaîne hexadécimale
-    
-    return hashHex;  // Renvoie le hash sous forme hexadécimale
-  }
-  
-  // Exemple d'utilisation
-  generateSHA256Hash('Hello, world!')
-    .then(hash => console.log(hash));  
-
-
-
-
-
-async function hash(string) {
-    const utf8 = new TextEncoder().encode(string);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray
-        .map((bytes) => bytes.toString(16).padStart(2, '0'))
-        .join('');
-    return hashHex;
-    }
-
-hash('foo').then((hex) => console.log(hex));
-SHA-256 pas trop securiseret non possibiliter de reccuperation 
-*/
-
-// PGP (Pretty Good Privacy) en js
-
-import * as openpgp from 'openpgp';
-
-(async () => {
-    await openpgp.initWorker({ path: 'openpgp.worker.js' }); // set the relative web worker path
-
-    // put keys in backtick (``) to avoid errors caused by spaces or tabs
-    //a rempalcer avec public dans key.txt
-    const publicKeyArmored = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+// La clé publique et la clé privée
+const publicKeyArmored = `-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBGf+TUUBCAC3wX4ais/FCavelN0QtALkTNTeLyrYjG0sXEmADcEaw8K870jG
 p5f8iiYL1ttQfLt4Rr6HPRdL5WtHG3l4Z3Rp5ixV/h97ba31hRC3LKhIMWgPOg67
@@ -142,34 +95,21 @@ mQ+3ElbmuRXYYfDmsxJeCbKm42dKLQ==
 =5Utf
 -----END PGP PRIVATE KEY BLOCK-----`; // encrypted private key
 
+const passphrase = `Gibbon72?`; // Passphrase pour déverrouiller la clé privée
 
+(async () => {
+    // Initialiser OpenPGP et la clé privée
+    await initOpenPGP();
+    const privateKey = await loadPrivateKey(privateKeyArmored, passphrase);
 
+    // Exemple de message à chiffrer
+    const message = "Ceci est un message secret.";
 
-    const passphrase = `Gibbon72?`; // what the private key is encrypted with
+    // Chiffrer le message
+    const encryptedMessage = await crypted(message, publicKeyArmored, privateKey);
+    console.log("Message chiffré : ", encryptedMessage);
 
-    const { keys: [privateKey] } = await openpgp.key.readArmored(privateKeyArmored);
-    await privateKey.decrypt(passphrase);
+    // Déchiffrer le message
+    const decryptedMessage = await decrypted(encryptedMessage, publicKeyArmored, privateKey);
+    console.log("Message déchiffré : ", decryptedMessage);
 })();
-
-
-
-async function crypted(messageacrypter) {
-    const { data: encrypted } = await openpgp.encrypt({
-      message: openpgp.message.fromText(messageacrypter),                 // input as Message object
-      publicKeys: (await openpgp.key.readArmored(publicKeyArmored)).keys, // for encryption
-      privateKeys: [privateKey]                                           // for signing (optional)
-      });
-    console.log(encrypted);
-
-};
-
-
-async function decrypted() {
-  const { data: decrypted } = await openpgp.decrypt({
-    message: await openpgp.message.readArmored(encrypted),              // parse armored message
-    publicKeys: (await openpgp.key.readArmored(publicKeyArmored)).keys, // for verification (optional)
-    privateKeys: [privateKey]                                           // for decryption
-    });
-
-  console.log(decrypted); // 'Hello, World!'
-};
