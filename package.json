@@ -1,0 +1,24 @@
+{
+  "name": "genially-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "partijs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renaudin-clement/genially-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renaudin-clement/genially-test/issues"
+  },
+  "homepage": "https://github.com/renaudin-clement/genially-test#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "postgres": "^3.4.5"
+  }
+}

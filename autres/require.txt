@@ -1,0 +1,6 @@
+npm init -y
+npm install @supabase/supabase-js
+npm install postgres
+
+node index.js
+

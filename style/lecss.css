@@ -1,20 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+
     padding-top: 50px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
   }
   .score-box {
     font-size: 2em;
     background: #fff;
+    
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
 
+li ,h1{    
+  text-align: center;
+}
+
 .partie1{
 background-color: aquamarine;
+  
 }
 
 .partie2{
@@ -25,59 +31,23 @@ background-color: rgb(127, 255, 133);
 background-color: rgb(197, 127, 255);
 }
 
-.partie4{
-background-color: rgb(255, 214, 127);
+
+
+
+
+
+
+
+
+img{
+  width: 150px;
 }
-
-
-.partie5{
-background-color: aquamarine;
-}
-
-.partie6{
-background-color: rgb(127, 255, 133);
-}
-
-.partie7{
-background-color: rgb(197, 127, 255);
-}
-
-.partie8{
-background-color: rgb(255, 214, 127);
-}
-
-.partie9{
-background-color: aquamarine;
-}
-
-.partie10{
-background-color: rgb(127, 255, 133);
-}
-
-.partie11{
-background-color: rgb(197, 127, 255);
-}
-
-.partie12{
-background-color: rgb(255, 214, 127);
-}
-
-.partie13{
-background-color: rgb(236, 255, 127);
-}
-
-
-
-
-
-
-
-
-
 
 
 li{
     list-style: none;
+    padding: 10px;
+    margin: 10px;
 }
 
 
