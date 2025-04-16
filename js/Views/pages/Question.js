@@ -22,13 +22,14 @@ export default class Question extends Page_comp {
     let reponse = "Comment on en est arriver la ?";
     let id = null;
     let score = null;
+    let total = 0;
 
     if (queryString) {
       const params = new URLSearchParams(queryString);
       id = params.get("id");
       score = params.get("score");
 
-      let total = getTotalQuestions();
+      total = getTotalQuestions();
 
       if(total = 10){
         window.location.href = "genially";
@@ -68,20 +69,27 @@ export default class Question extends Page_comp {
       }
     }
 
-    return Page_comp.renderPage(() => `
-      <section class="main-content">
-        <h2>Réponse :</h2>
-        <p>${reponse}</p>
-
-        <div class="score-box">
-            Oeuf total : <span id="scoreDisplay">${total}/10</span>
-        </div>
-        
-      </section>
-    `);
-    //${score !== null ? `<p>Score reçu : ${score}</p>` : ""}
-  }
-}
+    return Page_comp.renderPage(() => {
+      if (total === 0) {
+        return `
+          <section class="main-content">
+            <h2>Réponse :</h2>
+            <p>${reponse}</p>
+          </section>
+        `;
+      } else {
+        return `
+          <section class="main-content">
+            <h2>Réponse :</h2>
+            <p>${reponse}</p>
+    
+            <div class="score-box">
+              Oeuf total : <span id="scoreDisplay">${total}/10</span>
+            </div>
+          </section>
+        `;
+      }
+    });
 
 //avec score 
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
