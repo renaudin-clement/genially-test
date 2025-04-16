@@ -55,6 +55,12 @@ export default class Question extends Page_comp {
 
         // Sauvegarder
         localStorage.setItem("questions", JSON.stringify(questions));
+
+        total = getTotalQuestions();
+
+        if(total == 10){
+          window.location.href = "genially";
+        }
         
         } else{
           window.location.href = "https://zoodefis.netlify.app/#/dejatrouver";
@@ -99,4 +105,5 @@ export default class Question extends Page_comp {
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
 //sans score 
-// retour = https://zoodefis.netlify.app/#/question?id=6
+// retour = https://zoodefis.netlify.app/#/question?id=9
+
