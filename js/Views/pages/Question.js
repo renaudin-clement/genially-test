@@ -2,16 +2,16 @@ import Page_comp from "../composants/pagecomposer.js";
 
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
-  ["1", "coq corico"],
-  ["2", "i don't know why i am here"],
-  ["3", "trop cool"],
-  ["4", "tu peux le faire"],
-  ["5", "serpincroyable"],
-  ["6", "sois pas volatile"],
-  ["7", "rapide comme un wallabies"],
-  ["8", "tu ravi roux !"],
-  ["9", "tapis tapis tapis"],
-  ["10", "oeil de lynx"]
+  ["1", "phrase 1"],
+  ["2", "phrase 2"],
+  ["3", "phrase 3"],
+  ["4", "phrase 4"],
+  ["5", "phrase 5"],
+  ["6", "phrase 6"],
+  ["7", "phrase 7"],
+  ["8", "phrase 8"],
+  ["9", "phrase 9"],
+  ["10", "phrase 10"]
 ]);
 
 export default class Question extends Page_comp {
@@ -58,7 +58,7 @@ export default class Question extends Page_comp {
 
 
       } else if (id) {
-        reponse = `Aucune réponse trouvée pour la question ID: ${id}`;
+        reponse = `Cette Oeuf n'existe pas !`;
       }
     }
 
