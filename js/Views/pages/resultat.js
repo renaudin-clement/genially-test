@@ -5,8 +5,15 @@ import getTotalQuestions from "../../utils/Scorestotal.js";
 
 
 export default class Resultat extends Page_comp {
+
+    
     async render() {
         let total = getTotalQuestions();
+
+        if(total == 10){
+            window.location.href = "genially";
+        }
+
         console.log("Nombre total de questions :", total);
         return Page_comp.renderPage(() => `
 

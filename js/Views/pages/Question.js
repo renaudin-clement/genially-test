@@ -105,5 +105,4 @@ export default class Question extends Page_comp {
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
 //sans score 
-// retour = https://zoodefis.netlify.app/#/question?id=9
-
+// retour = https://zoodefis.netlify.app/#/question?id=3
