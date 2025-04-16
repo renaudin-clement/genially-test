@@ -93,12 +93,15 @@ export default class Question extends Page_comp {
           <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
-    
-            <div class="score-box">
-              Oeuf total : <span id="scoreDisplay">${total}/10</span>
-            </div>
-          </section>
+            </section>
         `);
+
+    /*
+        <div class="score-box">
+            Oeuf total : <span id="scoreDisplay">${total}/10</span>
+        </div>
+    */
+
       }
 
     }
@@ -109,5 +112,15 @@ export default class Question extends Page_comp {
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
 //sans score 
-// retour = https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
 
+
+//  https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
+//  https://zoodefis.netlify.app/#/question?id=4LsA2_Oku1
+//  https://zoodefis.netlify.app/#/question?id=xtqpP5Bds1
+//  https://zoodefis.netlify.app/#/question?id=aoUIwJCVtr
+//  https://zoodefis.netlify.app/#/question?id=pfUnU_fEsR
+//  https://zoodefis.netlify.app/#/question?id=lIoQ9plaaF
+//  https://zoodefis.netlify.app/#/question?id=6yVjOqskO~
+//  https://zoodefis.netlify.app/#/question?id=Pu6Cog495.
+//  https://zoodefis.netlify.app/#/question?id=Ii4NHw5aWd
+//  https://zoodefis.netlify.app/#/question?id=fNKzp-kTNE
