@@ -32,3 +32,21 @@ const router = async () => {
 
 window.addEventListener("load",router);
 window.addEventListener("hashchange",router);
+
+
+
+
+function incrementVisitCounter() {
+    let compteur = localStorage.getItem("visitCounter");
+  
+    if (compteur === null) {
+      compteur = 1;
+    } else {
+      compteur = parseInt(compteur) + 1;
+    }
+  
+    localStorage.setItem("visitCounter", compteur);
+    console.log(`Nombre de visites : ${compteur}`);
+  }
+  
+  incrementVisitCounter();
