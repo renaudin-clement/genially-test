@@ -49,7 +49,7 @@ export default class Question extends Page_comp {
         localStorage.setItem("questions", JSON.stringify(questions));
         
         } else{
-          window.location.href = "https://zoodefis.netlify.app/#/question";
+          window.location.href = "https://zoodefis.netlify.app/#/dejatrouver";
           console.log(localStorage);
           
 
