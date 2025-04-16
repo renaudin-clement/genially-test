@@ -49,6 +49,8 @@ export default class Question extends Page_comp {
         } else{
           console.log("elle existe deja")
           reponse = " oeuf deja visiter "
+          score = "deja attribuer"
+
         }
 
 
