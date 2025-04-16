@@ -11,8 +11,7 @@ let reponseQuestionParId = new Map([
   ["7", "rapide comme un wallabies"],
   ["8", "tu ravi roux !"],
   ["9", "tapis tapis tapis"],
-  ["10", "oeil de lynx"],
-  ["11", "presque à la fin"]
+  ["10", "oeil de lynx"]
 ]);
 
 export default class Question extends Page_comp {
