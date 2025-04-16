@@ -43,12 +43,14 @@ export default class Question extends Page_comp {
           score: parseInt(score) || 0,
         });
 
+        // Sauvegarder
+        localStorage.setItem("questions", JSON.stringify(questions));
+        reponse = " oeuf deja visiter "
         } else{
           console.log("elle existe deja")
         }
 
-        // Sauvegarder
-        localStorage.setItem("questions", JSON.stringify(questions));
+
       } else if (id) {
         reponse = `Aucune réponse trouvée pour la question ID: ${id}`;
       }
