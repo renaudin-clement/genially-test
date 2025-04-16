@@ -1,7 +1,6 @@
 import Page_comp from "../composants/pagecomposer.js";
 
-//dictionnaire des question
-
+// Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
   ["1", "coq corico"],
   ["2", "i don't know why i am here"],
@@ -13,37 +12,50 @@ let reponseQuestionParId = new Map([
   ["8", "tu ravi roux !"],
   ["9", "tapis tapis tapis"],
   ["10", "oeil de lynx"],
-  ["11", "presque a la fin"]
+  ["11", "presque à la fin"]
 ]);
 
-
-// changer reponse reponseQuestionParId.set("1", "woof");
-
-
-/*
-console.log(reponseQuestionParId.size);
-console.log(reponseQuestionParId.get("2"));
-console.log(reponseQuestionParId.has("2"));
-reponseQuestionParId.delete("1");
-*/
-
-
-for (let [key, value] of reponseQuestionParId) {
-console.log(key + " dis a la personne " + value);
-}
-
-
 export default class Question extends Page_comp {
-    async render() {
-      
-        return Page_comp.renderPage(() => `
-      <section class="main-content">
-        <p> ${reponseQuestionParId.get("1")} </p>
+  async render() {
+    // Récupération des paramètres URL
+    const queryString = window.location.hash.split("?")[1];
+    let reponse = "Aucune question sélectionnée.";
+    let id = null;
+    let score = null;
 
+    if (queryString) {
+      const params = new URLSearchParams(queryString);
+      id = params.get("id");
+      score = params.get("score");
+
+      if (id && reponseQuestionParId.has(id)) {
+        reponse = reponseQuestionParId.get(id);
+
+        // Récupérer la liste existante ou créer une nouvelle
+        let questions = JSON.parse(localStorage.getItem("questions")) || [];
+
+        // Ajouter la question actuelle dans le localStorage
+        questions.push({
+          id: id,
+          texte: reponse,
+          score: parseInt(score) || 0,
+        });
+
+        // Sauvegarder
+        localStorage.setItem("questions", JSON.stringify(questions));
+      } else if (id) {
+        reponse = `Aucune réponse trouvée pour la question ID: ${id}`;
+      }
+    }
+
+    return Page_comp.renderPage(() => `
+      <section class="main-content">
+        <h2>Réponse :</h2>
+        <p>${reponse}</p>
+        ${score !== null ? `<p>Score reçu : ${score}</p>` : ""}
       </section>
     `);
-    }
+  }
 }
 
-
-
+// retour = https://zoodefis.netlify.app/#/question?id=5&score=3
