@@ -35,7 +35,9 @@ export default class Question extends Page_comp {
         let questions = JSON.parse(localStorage.getItem("questions")) || [];
         console.log(questions);
 
-        if (questions.length === 0){
+        let dejaVisite = questions.some(q => q.id === id);
+
+        if (questions.length === 0 || !dejaVisite ){
         console.log("existe?");
         // Ajouter la question actuelle dans le localStorage
         questions.push({
@@ -48,7 +50,7 @@ export default class Question extends Page_comp {
         localStorage.setItem("questions", JSON.stringify(questions));
         
         } else{
-          console.log("elle existe deja")
+          console.log("elle existe deja");
           reponse = " oeuf deja visiter "
           console.log(localStorage);
           //score = "deja attribuer"
