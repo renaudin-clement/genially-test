@@ -31,7 +31,7 @@ export default class Question extends Page_comp {
 
       total = getTotalQuestions();
 
-      if(total = 10){
+      if(total == 10){
         window.location.href = "genially";
       }
 
@@ -99,4 +99,4 @@ export default class Question extends Page_comp {
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
 //sans score 
-// retour = https://zoodefis.netlify.app/#/question?id=5
+// retour = https://zoodefis.netlify.app/#/question?id=6
