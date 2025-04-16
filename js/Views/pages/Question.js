@@ -69,16 +69,17 @@ export default class Question extends Page_comp {
       }
     }
 
-    return Page_comp.renderPage(() => {
       if (total === 0) {
-        return `
+        return Page_comp.renderPage(() => `
           <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
           </section>
-        `;
-      } else {
-        return `
+        `);
+      } 
+      
+      else {
+        return Page_comp.renderPage(() => `
           <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
@@ -87,9 +88,9 @@ export default class Question extends Page_comp {
               Oeuf total : <span id="scoreDisplay">${total}/10</span>
             </div>
           </section>
-        `;
+        `);
       }
-    });
+
 
 //avec score 
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
