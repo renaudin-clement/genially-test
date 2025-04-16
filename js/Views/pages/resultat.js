@@ -7,14 +7,10 @@ function getTotalQuestions() {
     return questions.length;
 }
 
-// Utilisation :
-let total = getTotalQuestions();
-console.log("Nombre total de questions :", total);
-
-
 export default class Resultat extends Page_comp {
     async render() {
-        
+        let total = getTotalQuestions();
+        console.log("Nombre total de questions :", total);
         return Page_comp.renderPage(() => `
 
 <section>    
