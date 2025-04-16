@@ -2,6 +2,7 @@ import { ENDPOINT } from "../configs.js";
 
 const Utils = {
     parseRequestURL: () => {
+        // Enlève la partie après "?" pour un routage propre
         let url = location.hash.slice(1).split("?")[0].toLowerCase() || '/';
         let r = url.split("/");
         let request = {
@@ -14,6 +15,7 @@ const Utils = {
         request.verb = r[3];
         return request;
     },
+
     AutoFetch: async (url) => {
         const options = {
             methode: "GET",
@@ -23,7 +25,7 @@ const Utils = {
         };
 
         try {
-            const rep = await fetch(ENDPOINT+url, options);
+            const rep = await fetch(ENDPOINT + url, options);
             return await rep.json();
         } catch (error) {
             console.error(error);
