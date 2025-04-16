@@ -3,17 +3,21 @@ import getTotalQuestions from "../../utils/Scorestotal.js";
 
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
-  ["1", "phrase 1"],
-  ["2", "phrase 2"],
-  ["3", "phrase 3"],
-  ["4", "phrase 4"],
-  ["5", "phrase 5"],
-  ["6", "phrase 6"],
-  ["7", "phrase 7"],
-  ["8", "phrase 8"],
-  ["9", "phrase 9"],
-  ["10", "phrase 10"]
+  ["Y0XD04dQY8", "phrase 1"],
+  ["4LsA2_Oku1", "phrase 2"],
+  ["xtqpP5Bds1", "phrase 3"],
+  ["aoUIwJCVtr", "phrase 4"],
+  ["pfUnU_fEsR", "phrase 5"],
+  ["lIoQ9plaaF", "phrase 6"],
+  ["6yVjOqskO~", "phrase 7"],
+  ["Pu6Cog495.", "phrase 8"],
+  ["Ii4NHw5aWd", "phrase 9"],
+  ["fNKzp-kTNE", "phrase 10"]
 ]);
+
+
+
+
 
 export default class Question extends Page_comp {
   async render() {
@@ -105,4 +109,5 @@ export default class Question extends Page_comp {
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
 //sans score 
-// retour = https://zoodefis.netlify.app/#/question?id=3
+// retour = https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
+
