@@ -40,7 +40,7 @@ export default class Question extends Page_comp {
         questions.push({
           id: id,
           texte: reponse,
-          score: parseInt(score) || 0,
+          //score: parseInt(score) || 0,
         });
 
         // Sauvegarder
@@ -49,7 +49,7 @@ export default class Question extends Page_comp {
         } else{
           console.log("elle existe deja")
           reponse = " oeuf deja visiter "
-          score = "deja attribuer"
+          //score = "deja attribuer"
 
         }
 
@@ -63,9 +63,10 @@ export default class Question extends Page_comp {
       <section class="main-content">
         <h2>Réponse :</h2>
         <p>${reponse}</p>
-        ${score !== null ? `<p>Score reçu : ${score}</p>` : ""}
+        
       </section>
     `);
+    //${score !== null ? `<p>Score reçu : ${score}</p>` : ""}
   }
 }
 
