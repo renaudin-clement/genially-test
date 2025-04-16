@@ -70,4 +70,8 @@ export default class Question extends Page_comp {
   }
 }
 
+//avec score 
+// retour = https://zoodefis.netlify.app/#/question?id=5&score=3
+
+//sans score 
 // retour = https://zoodefis.netlify.app/#/question?id=5
