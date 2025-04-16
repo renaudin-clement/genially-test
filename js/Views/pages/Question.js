@@ -93,14 +93,11 @@ export default class Question extends Page_comp {
           <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
+            <div class="score-box">
+                Oeuf total : <span id="scoreDisplay">${total}/10</span>
+            </div>
             </section>
         `);
-
-    /*
-        <div class="score-box">
-            Oeuf total : <span id="scoreDisplay">${total}/10</span>
-        </div>
-    */
 
       }
 

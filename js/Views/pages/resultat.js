@@ -21,12 +21,16 @@ export default class Resultat extends Page_comp {
                     <div class="score-box">
                         Oeuf total : <span id="scoreDisplay">${total}/10</span>
                     </div>
-                    <div class="score-box">
-                        point total : <span id="scoreDisplay">-/10</span>
-                    </div>
+
                 </section>
 
     `);
+
+    /*
+    <div class="score-box">
+        point total : <span id="scoreDisplay">-/10</span>
+    </div>
+    */
     }
     
 }
