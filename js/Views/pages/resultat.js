@@ -1,11 +1,8 @@
 
 import Page_comp from "../composants/pagecomposer.js";
+import "../../utils/Scorestotal.js";
 
 
-function getTotalQuestions() {
-    let questions = JSON.parse(localStorage.getItem("questions")) || [];
-    return questions.length;
-}
 
 export default class Resultat extends Page_comp {
     async render() {

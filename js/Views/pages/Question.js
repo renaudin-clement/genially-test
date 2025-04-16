@@ -27,6 +27,12 @@ export default class Question extends Page_comp {
       id = params.get("id");
       score = params.get("score");
 
+      let total = getTotalQuestions();
+
+      if(total = 10){
+        window.location.href = "genially";
+      }
+
       if (id && reponseQuestionParId.has(id)) {
         reponse = reponseQuestionParId.get(id);
 
@@ -65,6 +71,10 @@ export default class Question extends Page_comp {
       <section class="main-content">
         <h2>Réponse :</h2>
         <p>${reponse}</p>
+
+        <div class="score-box">
+            Oeuf total : <span id="scoreDisplay">${total}/10</span>
+        </div>
         
       </section>
     `);
