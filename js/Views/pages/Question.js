@@ -34,9 +34,9 @@ export default class Question extends Page_comp {
         // Récupérer la liste existante ou créer une nouvelle
         let questions = JSON.parse(localStorage.getItem("questions")) || [];
         console.log(questions);
-        
-        if (questions == []){
 
+        if (questions.length === 0){
+        console.log("existe?");
         // Ajouter la question actuelle dans le localStorage
         questions.push({
           id: id,
