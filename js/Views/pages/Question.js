@@ -20,11 +20,13 @@ let reponseQuestionParId = new Map([
 // changer reponse reponseQuestionParId.set("1", "woof");
 
 
-
+/*
 console.log(reponseQuestionParId.size);
 console.log(reponseQuestionParId.get("2"));
 console.log(reponseQuestionParId.has("2"));
 reponseQuestionParId.delete("1");
+*/
+
 
 for (let [key, value] of reponseQuestionParId) {
 console.log(key + " dis a la personne " + value);
