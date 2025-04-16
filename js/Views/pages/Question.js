@@ -1,5 +1,5 @@
 import Page_comp from "../composants/pagecomposer.js";
-import "../../utils/Scorestotal.js";
+import getTotalQuestions from "../../utils/Scorestotal.js";
 
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
