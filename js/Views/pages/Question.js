@@ -45,9 +45,10 @@ export default class Question extends Page_comp {
 
         // Sauvegarder
         localStorage.setItem("questions", JSON.stringify(questions));
-        reponse = " oeuf deja visiter "
+        
         } else{
           console.log("elle existe deja")
+          reponse = " oeuf deja visiter "
         }
 
 
