@@ -17,7 +17,7 @@ let reponseQuestionParId = new Map([
 
 export default class Question extends Page_comp {
   async render() {
-    // Récupération des paramètres URL
+    
     const queryString = window.location.hash.split("?")[1];
     let reponse = "Aucune question sélectionnée.";
     let id = null;
