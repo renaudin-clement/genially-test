@@ -49,10 +49,9 @@ export default class Question extends Page_comp {
         localStorage.setItem("questions", JSON.stringify(questions));
         
         } else{
-          console.log("elle existe deja");
-          reponse = " oeuf deja visiter "
+          window.location.href = "https://zoodefis.netlify.app/#/question";
           console.log(localStorage);
-          //score = "deja attribuer"
+          
 
         }
 

@@ -4,6 +4,7 @@ import Question from "./js/Views/pages/Question.js";
 
 import Identifiant from "./js/Views/pages/Identifiant.js";
 import Resultat from "./js/Views/pages/resultat.js";
+import DejaPresent from "./js/Views/pages/OeufDejaTrouver.js"
 
 import Utils from "./js/services/Utils.js";
 
@@ -15,6 +16,7 @@ const routes = {
     "/question" : Question,
     "/resultat" : Resultat,
     "/identifiant" : Identifiant,
+    "/dejatrouver" : DejaPresent,
     
 }
 
