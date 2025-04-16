@@ -19,7 +19,7 @@ export default class Question extends Page_comp {
   async render() {
     
     const queryString = window.location.hash.split("?")[1];
-    let reponse = "Aucune question sélectionnée.";
+    let reponse = "Comment on en est arriver la ?";
     let id = null;
     let score = null;
 
@@ -70,4 +70,4 @@ export default class Question extends Page_comp {
   }
 }
 
-// retour = https://zoodefis.netlify.app/#/question?id=5&score=3
+// retour = https://zoodefis.netlify.app/#/question?id=5
