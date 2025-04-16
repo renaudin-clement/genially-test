@@ -1,5 +1,5 @@
-import HeaderBar from './HeaderBar.js';
-import Footer from './Footer.js';
+import HeaderBar from './Headbar.js';
+import Footer from './footer.js';
 
 export default class Page_comp {
     async render(){;};

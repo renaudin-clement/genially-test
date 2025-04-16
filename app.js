@@ -1,13 +1,21 @@
-import Home_page from "./js/views/pages/Home.js";
-import Error_Page from "./js/views/pages/ErrorPage.js";
+import Home_page from "./js/Views/pages/Home.js";
+import Error_Page from "./js/Views/pages/Errors.js";
+import Question from "./js/Views/pages/Question.js";
+
+import Identifiant from "./js/Views/pages/Identifiant.js";
+import Resultat from "./js/Views/pages/resultat.js";
 
 import Utils from "./js/services/Utils.js";
+
 
 const routes = {
     ""             : Home_page,
     "/"            : Home_page,
     "/home"        : Home_page,
-    "/comparaison" : Comparaison_page,
+    "/question" : Question,
+    "/resultat" : Resultat,
+    "/identifiant" : Identifiant,
+    
 }
 
 const router = async () => {

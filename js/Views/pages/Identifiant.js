@@ -1,5 +1,5 @@
 
-import Page_comp from "../componants/Page_comp.js";
+import Page_comp from "../composants/pagecomposer.js";
 
 export default class Identifier extends Page_comp {
     async render() {

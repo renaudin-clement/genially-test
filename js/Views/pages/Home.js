@@ -1,4 +1,4 @@
-import Page_comp from "../componants/Page_comp.js";
+import Page_comp from "../composants/pagecomposer.js";
 
 export default class Home extends Page_comp {
     async render() {
@@ -6,7 +6,6 @@ export default class Home extends Page_comp {
         return Page_comp.renderPage(() => `
       <section class="main-content">
         <p> test </p>
-
       </section>
     `);
     }
