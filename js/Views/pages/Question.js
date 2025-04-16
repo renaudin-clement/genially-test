@@ -1,5 +1,5 @@
 import Page_comp from "../composants/pagecomposer.js";
-import * as fonctiontotal from "../../utils/Scorestotal.js";
+import "../../utils/Scorestotal.js";
 
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
@@ -28,7 +28,7 @@ export default class Question extends Page_comp {
       id = params.get("id");
       score = params.get("score");
 
-      let total = fonctiontotal.getTotalQuestions();
+      let total = getTotalQuestions();
 
       if(total = 10){
         window.location.href = "genially";

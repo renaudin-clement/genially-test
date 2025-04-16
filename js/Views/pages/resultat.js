@@ -1,12 +1,12 @@
 
 import Page_comp from "../composants/pagecomposer.js";
-import * as fonctiontotal from "../../utils/Scorestotal.js";
+import "../../utils/Scorestotal.js";
 
 
 
 export default class Resultat extends Page_comp {
     async render() {
-        let total = fonctiontotal.getTotalQuestions();
+        let total = getTotalQuestions();
         console.log("Nombre total de questions :", total);
         return Page_comp.renderPage(() => `
 
