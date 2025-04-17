@@ -1,1 +1,1 @@
-export const ENDPOINT = "https://zoodefis.netlify.app/"; //changer avec app
+export const ENDPOINT = "http://localhost:8080/"; //changer avec app

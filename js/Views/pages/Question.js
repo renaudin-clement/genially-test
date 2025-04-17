@@ -1,6 +1,6 @@
 import Page_comp from "../composants/pagecomposer.js";
 import getTotalQuestions from "../../utils/Scorestotal.js";
-
+import {ENDPOINT}  from "../../configs.js";
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
   ["Y0XD04dQY8", "phrase 1"],
@@ -10,7 +10,7 @@ let reponseQuestionParId = new Map([
   ["pfUnU_fEsR", "phrase 5"],
   ["lIoQ9plaaF", "phrase 6"],
   ["6yVjOqskO~", "phrase 7"],
-  ["Pu6Cog495.", "phrase 8"],
+  ["Pu6Cog495", "phrase 8"],
   ["Ii4NHw5aWd", "phrase 9"],
   ["fNKzp-kTNE", "phrase 10"]
 ]);
@@ -121,3 +121,16 @@ export default class Question extends Page_comp {
 //  https://zoodefis.netlify.app/#/question?id=Pu6Cog495.
 //  https://zoodefis.netlify.app/#/question?id=Ii4NHw5aWd
 //  https://zoodefis.netlify.app/#/question?id=fNKzp-kTNE
+
+
+
+//  http://localhost:8080/#/question?id=Y0XD04dQY8
+//  http://localhost:8080/#/question?id=4LsA2_Oku1
+//  http://localhost:8080/#/question?id=xtqpP5Bds1
+//  http://localhost:8080/#/question?id=aoUIwJCVtr
+//  http://localhost:8080/#/question?id=pfUnU_fEsR
+//  http://localhost:8080/#/question?id=lIoQ9plaaF
+//  http://localhost:8080/#/question?id=6yVjOqskO~
+//  http://localhost:8080/#/question?id=Pu6Cog495.
+//  http://localhost:8080/#/question?id=Ii4NHw5aWd
+//  http://localhost:8080/#/question?id=fNKzp-kTNE
