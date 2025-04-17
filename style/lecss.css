@@ -52,17 +52,35 @@ li{
 
 
   ul{
-    background-color: blanchedalmond;
     display: flex;
     flex-wrap: wrap;
+    background-color: blanchedalmond;
 
   }
 
 
   header{
+    display: flex;
+    flex-wrap: nowrap;
     background-color: chocolate;
   }
 
-  footer{
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
     background-color: yellowgreen;
   }
+
+ul{
+      display: flex;
+    flex-wrap: nowrap;
+}
+
+@media(max-width:390px){
+  
+  .content{
+    /*! display: none; */
+  }
+  
+  
+}
