@@ -63,11 +63,11 @@ export default class Question extends Page_comp {
         total = getTotalQuestions();
 
         if(total == 10){
-          window.location.href = "genially";
+          window.location.href = `${ENDPOINT}#/resultat`;
         }
         
         } else{
-          window.location.href = "https://zoodefis.netlify.app/#/dejatrouver";
+          window.location.href = `${ENDPOINT}#/dejatrouver`;
           console.log(localStorage);
           
 
@@ -108,9 +108,9 @@ export default class Question extends Page_comp {
 //avec score 
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
+
+
 //sans score 
-
-
 //  https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
 //  https://zoodefis.netlify.app/#/question?id=4LsA2_Oku1
 //  https://zoodefis.netlify.app/#/question?id=xtqpP5Bds1
