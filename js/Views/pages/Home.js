@@ -7,9 +7,7 @@ export default class Home extends Page_comp {
     console.log("clear all");
     // Affichage de la page
     return Page_comp.renderPage(() => `
-      <section class="main-content">
         <p>Bienvenue sur la page d'accueil !</p>
-      </section>
     `);
   }
 }

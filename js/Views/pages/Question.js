@@ -81,22 +81,24 @@ export default class Question extends Page_comp {
 
       if (total === 0) {
         return Page_comp.renderPage(() => `
-          <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
-          </section>
         `);
       } 
       
       else {
         return Page_comp.renderPage(() => `
-          <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
+            <div class="explosion">
+              <div class="piece piece1"></div>
+              <div class="piece piece2"></div>
+              <div class="piece piece3"></div>
+              <div class="piece piece4"></div>
+            </div>
             <div class="score-box">
                 Oeuf total : <span id="scoreDisplay">${total}/10</span>
             </div>
-            </section>
         `);
 
       }

@@ -5,18 +5,23 @@ html, body {
       height: 100%;
     }
 
+
+
+body {
+      display: flex;
+      flex-direction: column;
+    }
+
     header {
       background-color: #333;
       color: white;
       padding: 1rem;
       text-align: center;
-      height: 25vh;
     }
 
     .centrer {
-      flex-grow: 1;
+      flex: 1;
       padding: 1rem;
-      height: 50vh;
     }
 
     footer {
@@ -24,14 +29,9 @@ html, body {
       color: white;
       padding: 1rem;
       text-align: center;
-      height: 25vh;
     }
 
-main{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 
   .score-box {
     font-size: 2em;
@@ -73,14 +73,12 @@ li{
     display: flex;
     flex-wrap: nowrap;
     background-color: chocolate;
-    justify-content: center;
   }
 
   footer {
     display: flex;
     flex-wrap: nowrap;
     background-color: yellowgreen;
-    justify-content: center;
   }
 
 

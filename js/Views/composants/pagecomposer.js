@@ -8,9 +8,9 @@ export default class Page_comp {
           ${await HeaderBar.render()}
 
           
-          <section class ="centrer">
+          <main class ="centrer">
                 ${await contentCallback()}
-          </section>
+          </main>
 
           ${await Footer.render()}
         `;
