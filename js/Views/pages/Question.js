@@ -23,7 +23,7 @@ export default class Question extends Page_comp {
   async render() {
     
     const queryString = window.location.hash.split("?")[1];
-    let reponse = "il reste encore des oeufs";
+    let reponse = "il reste encore des oeufs !";
     let id = null;
     let score = null;
     let total = 0;
