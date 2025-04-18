@@ -23,7 +23,7 @@ export default class Question extends Page_comp {
   async render() {
     
     const queryString = window.location.hash.split("?")[1];
-    let reponse = "Comment on en est arriver la ?";
+    let reponse = "il reste encore des oeufs";
     let id = null;
     let score = null;
     let total = 0;
@@ -81,7 +81,9 @@ export default class Question extends Page_comp {
 
       if (total === 0) {
         return Page_comp.renderPage(() => `
-            <h2>Réponse :</h2>
+            <div class="score-box">
+                Oeuf total : <span id="scoreDisplay">${total}/10</span>
+            </div>
             <p>${reponse}</p>
         `);
       } 

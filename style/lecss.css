@@ -39,54 +39,62 @@ main.centrer {
   gap: 20px;
 }
 
+/* ✅ Footer global */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
   background-color: yellowgreen;
   color: white;
-  padding: 15px 10px;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-/* 💡 Images adaptatives */
-footer img {
-  max-width: 12vw;
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ permet le wrap propre */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ✅ Images dans le footer */
+.footer-content img {
+  max-width: 50px;
   min-width: 28px;
   height: auto;
-  margin: 0 10px;
   object-fit: contain;
 }
 
-/* 💡 Navigation */
-ul {
+/* ✅ Navigation */
+.footer-content ul {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 15px;
   padding: 0;
   margin: 0;
-}
-
-li {
   list-style: none;
-  padding: 10px;
-  margin: 5px;
 }
 
-li, h1 {
-  text-align: center;
-  align-content: center;
-}
-
-a {
+.footer-content li a {
   text-decoration: none;
-  color: inherit;
+  color: white;
   font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
+.footer-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Score box */
 .score-box {
   font-size: 2em;
   background: #fff;
@@ -96,37 +104,82 @@ a {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+/* ✅ Icônes génériques */
 img {
   width: 30px;
   height: auto;
+  /*! padding: 10px; */
 }
 
-/* 💡 Responsive standard */
+/* ✅ Responsive */
 @media (max-width: 768px) {
-  ul {
-    flex-direction: column;
+  .footer-content img {
+    max-width: 40px;
   }
 
-  footer {
-    flex-direction: column;
+  .footer-content ul {
+    gap: 10px;
   }
 
-  footer img {
-    margin: 10px 0;
+  .footer-content li a {
+    padding: 8px 12px;
   }
 }
 
-/* 💡 Pour très petits écrans : ex. 320px */
 @media (max-width: 400px) {
   .score-box {
     font-size: 1.5em;
     padding: 15px;
   }
 
-  footer img {
-    max-width: 16vw;
-  }
-
   main.centrer {
     padding: 10px;
   }
+
+  .footer-content img {
+    max-width: 30px;
+  }
+
+  .footer-content li a {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+  
+}
+
+
+
+
+@media (max-width: 380px) {
+  .footer-content {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .footer-content img {
+    max-width: 24px;
+    min-width: 20px;
+  }
+
+  .footer-content ul {
+    gap: 6px;
+  }
+
+  .footer-content li a {
+    padding: 4px 6px;
+    font-size: 0.75em;
+    white-space: nowrap; /* évite les retours à la ligne */
+  }
+
+  .score-box {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  main.centrer {
+    padding: 8px;
+  }
+}
+
+
+
