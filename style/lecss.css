@@ -1,104 +1,132 @@
-
 html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-
-
-header{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: chocolate;
-    color: white;
-  justify-content: center;
-    text-align: center;
-  flex-grow: 1;
+  color: white;
+  padding: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-.centrer {
+main.centrer {
+  flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
+  align-items: center;
+  padding: 20px;
 }
 
-
-
-
-
-
-
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 footer {
   display: flex;
-  flex-wrap: nowrap;
-  background-color: yellowgreen;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: yellowgreen;
+  color: white;
+  padding: 15px 10px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   text-align: center;
-  align-content: center;
-  width: 100%;
-  flex-grow: 1;
 }
 
+/* 💡 Images adaptatives */
+footer img {
+  max-width: 12vw;
+  min-width: 28px;
+  height: auto;
+  margin: 0 10px;
+  object-fit: contain;
+}
 
+/* 💡 Navigation */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
 
+li {
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+}
 
+li, h1 {
+  text-align: center;
+  align-content: center;
+}
 
-
-
-
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
 
 .score-box {
   font-size: 2em;
   background: #fff;
-
   padding: 20px;
   display: inline-block;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-
-ul{
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-
-li ,h1{    
-  text-align: center;
-  align-content: center;
-}
-
-li{
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-}
-
-
-img{
+img {
   width: 30px;
+  height: auto;
 }
 
-  .content{
-   display: flex;
-   flex-wrap: wrap;
-  } 
+/* 💡 Responsive standard */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
 
-@media(max-width:390px){
-  
-  .content{
-    /*! display: none; */
-  } 
+  footer {
+    flex-direction: column;
+  }
+
+  footer img {
+    margin: 10px 0;
+  }
 }
+
+/* 💡 Pour très petits écrans : ex. 320px */
+@media (max-width: 400px) {
+  .score-box {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  footer img {
+    max-width: 16vw;
+  }
+
+  main.centrer {
+    padding: 10px;
+  }
