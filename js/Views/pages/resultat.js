@@ -16,6 +16,7 @@ export default class Resultat extends Page_comp {
                     <div class="score-box">
                         🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
                     </div>
+                    <img class = "oeufquigigotte"    src="../../asset/sunflower-easter-egg-watercolor-png-5692308.png" alt="oeufquigigotte">
 
 
     `);

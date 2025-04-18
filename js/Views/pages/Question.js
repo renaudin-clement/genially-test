@@ -82,10 +82,13 @@ export default class Question extends Page_comp {
       if (total === 0) {
         total = getTotalQuestions();
         return Page_comp.renderPage(() => `
+          <h3> La chasse n'est pas terminé</h3>
+       
             <div class="score-box">
                 🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
             </div>
             <p>${reponse}</p>
+            <img class = "oeufquigigotte"    src="../../asset/sunflower-easter-egg-watercolor-png-5692308.png" alt="oeufquigigotte">
         `);
       } 
       
@@ -95,6 +98,8 @@ export default class Question extends Page_comp {
             <div class="score-box">
                 🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
             </div>
+            <img class = "oeufquigigotte"    src="../../asset/sunflower-easter-egg-watercolor-png-5692308.png" alt="oeufquigigotte">
+            
             <div class="explosion">
               <div class="piece piece1"></div>
               <div class="piece piece2"></div>
