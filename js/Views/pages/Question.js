@@ -3,16 +3,16 @@ import getTotalQuestions from "../../utils/Scorestotal.js";
 import {ENDPOINT}  from "../../configs.js";
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
-  ["Y0XD04dQY8", "phrase 1"],
-  ["4LsA2_Oku1", "phrase 2"],
-  ["xtqpP5Bds1", "phrase 3"],
-  ["aoUIwJCVtr", "phrase 4"],
-  ["pfUnU_fEsR", "phrase 5"],
-  ["lIoQ9plaaF", "phrase 6"],
-  ["6yVjOqskO~", "phrase 7"],
-  ["Pu6Cog495", "phrase 8"],
-  ["Ii4NHw5aWd", "phrase 9"],
-  ["fNKzp-kTNE", "phrase 10"]
+  ["Y0XD04dQY8", "Un Poussin (poux-sain) !"],
+  ["4LsA2_Oku1", "Tu en pousse un !"],
+  ["xtqpP5Bds1", "John John Deuf (jaune d'oeuf) !"],
+  ["aoUIwJCVtr", "Des chocolats (chaud-colle-a) !"],
+  ["pfUnU_fEsR", "Les chocolats de Pâques (lait-chaud-col-a-deux-pas-queue) !"],
+  ["lIoQ9plaaF", "3    (6-2-1=3) !"],
+  ["6yVjOqskO~", "Une tulipe (tu-lit-peu) !"],
+  ["Pu6Cog495", "Un lapin (LA-pain) !"],
+  ["Ii4NHw5aWd", "Panier (pas-nid-haie) !"],
+  ["fNKzp-kTNE", "Pâques (pas queue) !"]
 ]);
 
 

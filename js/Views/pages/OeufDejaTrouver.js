@@ -5,7 +5,7 @@ export default class OeufDejaTrouver extends Page_comp {
 
     // Affichage de la page
     return Page_comp.renderPage(() => `
-        <p>Oeuf deja trouver</p>
+        <p>Œuf déjà trouvé ! Cherche ailleurs 😄🥚</p>
     `);
   }
 }
