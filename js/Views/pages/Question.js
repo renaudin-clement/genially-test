@@ -80,6 +80,7 @@ export default class Question extends Page_comp {
     }
 
       if (total === 0) {
+        total = getTotalQuestions();
         return Page_comp.renderPage(() => `
             <div class="score-box">
                 Oeuf total : <span id="scoreDisplay">${total}/10</span>
@@ -92,15 +93,14 @@ export default class Question extends Page_comp {
         return Page_comp.renderPage(() => `
             <h2>Réponse :</h2>
             <p>${reponse}</p>
-            <div class="explosion">
-              <div class="piece piece1"></div>
-              <div class="piece piece2"></div>
-              <div class="piece piece3"></div>
-              <div class="piece piece4"></div>
-            </div>
             <div class="score-box">
                 Oeuf total : <span id="scoreDisplay">${total}/10</span>
             </div>
+            <div class="explosion">
+              <div class="piece piece1"></div>
+              <div class="piece piece2"></div>
+            </div>
+
         `);
 
       }
