@@ -83,7 +83,7 @@ export default class Question extends Page_comp {
         total = getTotalQuestions();
         return Page_comp.renderPage(() => `
             <div class="score-box">
-                Oeuf total : <span id="scoreDisplay">${total}/10</span>
+                🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
             </div>
             <p>${reponse}</p>
         `);
@@ -91,10 +91,9 @@ export default class Question extends Page_comp {
       
       else {
         return Page_comp.renderPage(() => `
-            <h2>Réponse :</h2>
-            <p>${reponse}</p>
+            <h3>Réponse : ${reponse}</h3>
             <div class="score-box">
-                Oeuf total : <span id="scoreDisplay">${total}/10</span>
+                🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
             </div>
             <div class="explosion">
               <div class="piece piece1"></div>

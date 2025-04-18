@@ -12,9 +12,9 @@ export default class Resultat extends Page_comp {
 
         console.log("Nombre total de questions :", total);
         return Page_comp.renderPage(() => `
-   
+                    <h3>Bravo, tu as trouvé tous ces œufs !</h3>
                     <div class="score-box">
-                        Oeuf total : <span id="scoreDisplay">${total}/10</span>
+                        🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
                     </div>
 
 

@@ -1,4 +1,4 @@
-
+import Home_page from "./js/Views/pages/Home.js";
 import Error_Page from "./js/Views/pages/Errors.js";
 import Question from "./js/Views/pages/Question.js";
 
@@ -12,7 +12,7 @@ import Utils from "./js/services/Utils.js";
 const routes = {
     ""             : Question,
     "/"            : Question,
-    "/home"        : Question,
+    "/home"        : Home_page,
     "/question" : Question,
     "/resultat" : Resultat,
     "/identifiant" : Identifiant,
