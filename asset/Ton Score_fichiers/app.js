@@ -1,25 +1,22 @@
-//import Home_page from "./js/Views/pages/Home.js";
+import Home_page from "./js/Views/pages/Home.js";
 import Error_Page from "./js/Views/pages/Errors.js";
 import Question from "./js/Views/pages/Question.js";
 
 import Identifiant from "./js/Views/pages/Identifiant.js";
 import Resultat from "./js/Views/pages/resultat.js";
 import DejaPresent from "./js/Views/pages/OeufDejaTrouver.js"
-import Ha from "./js/Views/pages/ha.js"
 
 import Utils from "./js/services/Utils.js";
 
 
 const routes = {
-    ""             : Question,
-    "/"            : Question,
-    "/home"        : Question,
-    //"/home"        : Home_page,
+    ""             : Home_page,
+    "/"            : Home_page,
+    "/home"        : Home_page,
     "/question" : Question,
     "/resultat" : Resultat,
     "/identifiant" : Identifiant,
     "/dejatrouver" : DejaPresent,
-    "/Surprise" :Ha,
     
 }
 

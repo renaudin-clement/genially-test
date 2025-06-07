@@ -10,7 +10,7 @@ let reponseQuestionParId = new Map([
   ["pfUnU_fEsR", "Les chocolats de Pâques (lait-chaud-col-a-deux-pas-queue) !"],
   ["lIoQ9plaaF", "3    (6-2-1=3) !"],
   ["6yVjOqskO~", "Une tulipe (tu-lit-peu) !"],
-  ["Pu6Cog495", "Un lapin (LA-pain) !"],
+  ["Pu6Cog495.", "Un lapin (LA-pain) !"],
   ["Ii4NHw5aWd", "Panier (pas-nid-haie) !"],
   ["fNKzp-kTNE", "Pâques (pas queue) !"]
 ]);
@@ -75,7 +75,7 @@ export default class Question extends Page_comp {
 
 
       } else if (id) {
-        reponse = `Cette Oeuf n'existe pas !`;
+        reponse = `Cet Oeuf n'existe pas !`;
       }
     }
 
