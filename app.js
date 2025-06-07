@@ -11,15 +11,15 @@ import Utils from "./js/services/Utils.js";
 
 
 const routes = {
-    ""             : Question,
-    "/"            : Question,
+    ""             : Ha,
+    "/"            : Ha,
     "/home"        : Question,
     //"/home"        : Home_page,
     "/question" : Question,
     "/resultat" : Resultat,
     "/identifiant" : Identifiant,
     "/dejatrouver" : DejaPresent,
-    "/Surprise" :Ha,
+    "/surprise" :Ha,
     
 }
 
