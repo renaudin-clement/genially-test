@@ -1,4 +1,4 @@
-//import Home_page from "./js/Views/pages/Home.js";
+import Home_page from "./js/Views/pages/Home.js";
 import Error_Page from "./js/Views/pages/Errors.js";
 import Question from "./js/Views/pages/Question.js";
 
@@ -11,8 +11,8 @@ import Utils from "./js/services/Utils.js";
 
 
 const routes = {
-    ""             : Ha,
-    "/"            : Ha,
+    ""             : Home_page,
+    "/"            : Home_page,
     "/home"        : Question,
     //"/home"        : Home_page,
     "/question" : Question,
